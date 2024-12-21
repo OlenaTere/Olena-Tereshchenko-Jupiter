@@ -1,0 +1,45 @@
+body {
+    background-color: floralwhite;
+    color: sienna;
+    font-family: sans-serif 
+
+}
+
+#name-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    padding-top: 0.5;
+    background-color: moccasin;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+    border: 10px solid moccasin
+    
+}
+
+h2 {
+    text-align: left;
+    width: 170px;
+    font-size: 2rem;
+    background-color: peachpuff;
+    margin: 30px;
+    padding: 10px;
+    list-style: none;
+}
+#profile-picture {
+    border: 10px solid sandybrown;
+    margin: 30px;
+    width: 25vw;
+
+}
+
+.ocupation {
+    padding: 0px;
+    margin: 30px;
+
+}
+
+li {
+    list-style: none;
+
+}
