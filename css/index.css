@@ -1,14 +1,14 @@
 body {
     background-color: floralwhite;
     color: sienna;
-    font-family: sans-serif 
+    font-family: sans-serif; 
 
 }
 
 #name-header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
-    padding-top: 0.5;
+    padding-top: 0.5em;
     background-color: moccasin;
     text-align: center;
     padding: 10px;
