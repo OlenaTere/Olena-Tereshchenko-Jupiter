@@ -95,6 +95,13 @@ li {
     display: grid;
 }
 
+#skills {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    padding: 0,5em;
+    width: 20em;
+}
 /* other devices */
 
 @media screen and (max-width: 1000px) {
