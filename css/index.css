@@ -74,11 +74,13 @@ section {
     background-color: azure;
     padding: 0,5em;
     width: 20em;
+    margin: 30px;
 }
 
 .one-experience {
     display: flex;
     flex-direction: column;
+    
 }
 
 .date {
@@ -101,7 +103,18 @@ li {
     background-color: azure;
     padding: 0,5em;
     width: 20em;
+    margin: 30px;
 }
+
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(202, 227, 227);
+    padding: 0,5em;
+    width: 15em;
+    margin: 30px;
+}
+
 /* other devices */
 
 @media screen and (max-width: 1000px) {
