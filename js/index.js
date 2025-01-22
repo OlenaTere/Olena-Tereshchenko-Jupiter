@@ -32,6 +32,7 @@ const listsArray = Array.from(lists);
 console.log(listsArray);
 
 
+
 //Asynchronous Programming And Promises Lesson
 
 //Handle Message Form Submit
@@ -50,19 +51,15 @@ console.log(messageList);
 
 //callback for submit
 //Add an event listener
-messageForm.addEventListener(`submit`, (event) => {
+messageForm.addEventListener("submit", (event) => {
     //prevent the default refreshing behavior
     event.preventDefault();
-    const data = new FormData(event.target);
-console.log(data);
-
-//create three new variables (one for each of the three form fields) and retrieve the value from the event
-const userName = data.get("usersName");
-const email = data.get("usersEmail");
-const usersMessage = data.get("usersMessage");
-console.log(userName);
-console.log(usersEmail);
-console.log(usersMessage);
+    const userName = event.target.usersName.value;
+    const email = event.target.usersEmail.value;
+    const usersMessage = event.target.usersMessage.value;
+    console.log(userName);
+    console.log(email);
+    console.log(usersMessage);
 
 //Create a variable named newMessage
 const newMessage = document.createElement("li");
@@ -73,39 +70,52 @@ console.log(newString);
 newMessage.innerHTML = newString;
 
 //Append the removeButton to the newMessage element
-newMessage.appendChild(removeButton);
+newMessage.appendChild(onRemoveButton);
 
 //Append the newMessage to the messageList element
 messageList[0].appendChild(newMessage);
 
 //reset
-event.target(reset);
+event.target.reset;
 
 });
 
 
 //Add remove button
-//Create a variable named removeButton
-const removeButton = document.createElement("button");
-
-//Set the inner text to "remove"
-removeButton.innerText = "Remove";
-
-//Set the type attribute to "button"
-removeButton.setAttribute("type", "button");
-
 //callback for remove button
 //Add an event listener to the removeButton
-removeButton.setAttribute("id", "removeButtonId");
 function onRemoveButton(event) {
-    console.log(Remove);
-    const entry = event.target.parentNode;
-    entry.remove();
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.setAttribute("type", "button");
+    removeButton.addEventListener("click", () => {
+        const entry = event.target.parentNode;
+        entry.remove();
+        if (messageList.childElementCount === 0) {
+            messageSection.hidden = true;
+        };
+
+    });
+    return removeButton;
+    
 };
 
 
+// //callback for submit
+// //Add an event listener
+// messageForm.addEventListener(`submit`, onSubmitButton);
+// function onSubmitButton(event) {
+//     //prevent the default refreshing behavior
+//     event.preventDefault();
+//     const userName = event.target.usersName.value;
+//     const email = event.target.usersEmail.value;
+//     const usersMessage = event.target.usersMessage.value;
+//     console.log(userName);
+//     console.log(email);
+//     console.log(usersMessage);
 
-
-
-
+// };
+    
+    
+    
 
