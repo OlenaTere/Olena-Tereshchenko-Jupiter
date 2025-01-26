@@ -115,6 +115,22 @@ li {
     margin: 30px;
 }
 
+#projects {
+    background-color: azure;
+    padding: 0,5em;
+    width: 20em;
+    margin: 30px;
+}
+
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: azure;
+    padding: 0,5em;
+    
+}
+
+
 /* other devices */
 
 @media screen and (max-width: 1000px) {
