@@ -36,9 +36,9 @@ console.log(listsArray);
 //Asynchronous Programming And Promises Lesson
 
 //Handle Message Form Submit
-const messageForms = document.getElementsByName("leave_message")
-console.log(messageForms);
-const messageForm = messageForms[0];
+const messageForm = document.getElementById("messageForm");
+console.log("messageForm: ", messageForm);
+
 
 //Create a variable named messageSection
 const messageSection = document.getElementById("messages");
@@ -102,3 +102,32 @@ function createRemoveButton() {
     return removeButton;
     
 };
+
+//Display Repositories in List
+const projectSection = document.getElementById("projects");
+console.log("projectSection: ", projectSection);
+const projectList = projectSection.querySelector("ul");
+console.log("projectList: ", projectList);
+
+//Creating a fetch
+fetch("https://api.github.com/users/OlenaTere/repos")
+.then((res) => {
+    return res.json();
+})
+//Handle a JSON data
+.then((repositories) => {
+    console.log("repositories: ", repositories);
+    for (i=0; i<repositories.length; i++) {
+        //console.log("i: ", i);
+        const project = repositories[i].name;
+        const li = document.createElement("li");
+        //set the inner text of my project to the Array el
+        li.innerText = project;
+        //append the project element to the projectList element
+        projectList.appendChild(li);
+    }
+})
+//Handling errors
+.catch((error) => {
+    console.log("error: ", error)
+})
