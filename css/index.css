@@ -14,7 +14,7 @@ body {
     text-align: center;
     padding: 10px;
     margin: 30px;
-    border: 10px solid moccasin;
+    width: fit-content;
     
 }
 h2 {
@@ -94,7 +94,12 @@ li {
 }
 
 #connect {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    padding: 0,5em;
+    width: 20em;
+    margin: 30px;
 }
 
 #skills {
@@ -109,13 +114,15 @@ li {
 #messageForm {
     display: flex;
     flex-direction: column;
-    background-color: rgb(202, 227, 227);
+    background-color: azure;
     padding: 0,5em;
-    width: 15em;
+    width: 20em;
     margin: 30px;
 }
 
 #projects {
+    display: flex;
+    flex-direction: column;
     background-color: azure;
     padding: 0,5em;
     width: 20em;
@@ -140,6 +147,17 @@ li {
         margin: 1em;
         background-color: azure;
     }
+
+    p {
+        font-size: larger;
+        margin: 30px;
+    }
+
+    section {
+        padding-bottom: 20px;
+        font-style: oblique;
+    }
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -149,15 +167,57 @@ li {
         margin: 1em;
         background-color: rgb(48, 84, 84);
     }
+
+    #connect ul {
+        text-align: left;
+        width: 170px;
+        background-color: peachpuff;
+        margin: 30px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    #navigation ul {
+        position: sticky;
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+    }
 }
 
 @media screen and (max-width: 600px) {
     body {
-        font-size: smaller;
-        color: blue;
+        font-size: small;
+        color: darkblue;
         margin: 1em;
         background-color: rgb(212, 220, 217);
     }
 
+    #navigation {
+        position: sticky;
+        display: block;
+        width: 500px;
+        text-align: right;
+        background-color: transparent;
+    }
 
+    #navigation ul {
+        position: sticky;
+        display: block;
+        width: fit-content;
+        float: right;
+        margin: 10px;
+        padding: 10px;
+        background-color: lemonchiffon;
+    }
+
+    #name-header {
+        font-size: 2rem;
+        text-align: justify;
+        width: fit-content; 
+    }
+  
 }
+
+    
+
